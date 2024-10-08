@@ -1,0 +1,189 @@
+/* main.css */
+@font-face {
+    font-family: NERKO;
+    src: url("/Socialmedia/MainSite/font/PlaywriteCU-VariableFont_wght.ttf");
+    } 
+
+@font-face {
+    font-family: quran;
+    src: url("/QuranApp/fonts/AmiriQuran-Regular.ttf");
+}
+
+body{
+    margin: 0px;
+    background-color: #FFF2D7;
+    overflow: hidden;
+}
+
+.main-cont{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+}
+
+.navbar {
+    grid-row: 1/12;
+    grid-column: 1/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #FFE0B5;
+    border-right: 1px solid rgb(165, 165, 165);
+    width: 200px;
+    height: 100%; /* Make the navbar stretch from top to bottom */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow-y: hidden; /* No scrolling on the navbar itself */
+    overflow-x: hidden;
+
+}
+
+/* Scrollable content inside navbar */
+.navbar-items {
+    width: 100%; /* Ensure content fills navbar width */
+    overflow-y: auto; /* Make the items inside the navbar scrollable */
+    overflow-x: hidden;
+    max-height: calc(100vh - 100px); /* Adjust based on padding */
+    /* 100vh (full height) minus 50px top padding and 50px bottom padding */
+}
+
+.navbar-items::-webkit-scrollbar {
+    width: 8px;
+}
+
+.navbar-items::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+.navbar-items::-webkit-scrollbar-thumb:hover {
+    background-color: #464646;
+}
+
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+
+.item:hover {
+    transform: scale(1.2);
+}
+
+.navbar-items a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Dropdown inside navbar */
+.item-dropdown {
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    flex-direction: column; /* Stack items vertically */
+    margin-top: 10px; /* Add spacing from the toggle item */
+    width: 100%; /* Same width as the navbar */
+}
+
+.dropdown-item {
+    padding: 10px;
+    text-align: end;
+    border: 0px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.dropdown-item:hover {
+    /*color or size...*/
+}
+
+.item-dropdown.active .dropdown-content {
+    display: flex; /* Show dropdown items stacked vertically */
+}
+#surah-toggle{
+    cursor: pointer;
+}
+
+.page-cont{
+    background-color: #FFF2D7;
+    grid-row: 1/12;
+    grid-column: 4/12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 200px;
+}
+.page-cont .button-cont{
+    width: 100%;
+    height: 100px;
+    background-color: #FFF2D7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.page-cont .button-cont form input{
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #FFF2D7;
+    border: 3px solid gray;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 0.3s;
+}
+.page-cont .button-cont form input:hover{
+    border-radius: 20px;
+    background-color: rgb(214, 214, 214);
+}
+
+
+.page-cont .ayah-cont{
+    width: auto;
+    height: auto;
+    background-color: #FFF2D7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: quran;
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+}
+
+.bismillah-cont{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+.sourah-cont{
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.sourah-cont::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sourah-cont::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+.sourah-cont::-webkit-scrollbar-thumb:hover {
+    background-color: #464646;
+}
